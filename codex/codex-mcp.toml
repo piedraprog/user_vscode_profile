@@ -10,18 +10,18 @@ args = [ "mcp-server-fetch" ]
 command = "bunx"
 args = [
   "@modelcontextprotocol/server-filesystem",
-  "C:\\Users\\gordo\\Documents\\Development\\personal",
-  "C:\\Users\\gordo\\Documents\\vault_obsidian",
-  "C:\\Users\\gordo\\Documents\\vault_obsidian_negocios",
-  "C:\\Users\\gordo\\Documents\\Development\\personal\\tools",
+  "${env:DEV_PROJECTS_DIR}",
+  "${env:OBSIDIAN_VAULT_DIR}",
+  "${env:OBSIDIAN_BUSINESS_VAULT_DIR}",
+  "${env:DEV_TOOLS_DIR}",
 ]
 
 [mcp_servers.cms]
 command = "bun"
-args = [ "C:\\Users\\gordo\\Documents\\Development\\personal\\tools\\mcp-servers\\mcp-cms\\dist\\index.js" ]
+args = [ "${env:CMS_MCP_ENTRY}" ]
 
 [mcp_servers.cms.env]
-CMS_URL = "https://cms.drapie.dev"
+CMS_URL = "${env:CMS_URL}"
 CMS_API_KEY = "${env:CMS_API_KEY}"
 
 [mcp_servers.stitch]

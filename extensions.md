@@ -48,11 +48,7 @@ Codex personal skills source:
 https://github.com/piedraprog/unified-personal-skills
 ```
 
-On this machine, 1030 unique skills were installed into:
-
-```text
-C:\Users\gordo\.codex\skills
-```
+On the original machine, 1030 unique skills were installed into Codex's user skills directory.
 
 The duplicated skill names skipped during install are recorded in [`codex/skills-backup.json`](codex/skills-backup.json).
 

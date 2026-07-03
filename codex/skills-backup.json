@@ -2,7 +2,7 @@
   "source": "https://github.com/piedraprog/unified-personal-skills",
   "installedAt": "2026-07-03",
   "installedUniqueSkills": 1030,
-  "installPath": "C:\\Users\\gordo\\.codex\\skills",
+  "installPath": "%USERPROFILE%\\.codex\\skills",
   "duplicateSkillNamesSkipped": [
     "2d-games",
     "3d-games",
