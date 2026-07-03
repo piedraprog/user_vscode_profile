@@ -7,9 +7,10 @@ No secrets, tokens, API keys, private SSH keys, cookies, or local credential fil
 ## What This Repository Contains
 
 - VS Code and Cursor extension profile.
-- Cursor-compatible MCP server configuration.
+- Cursor agents and project rules.
+- Cursor-compatible MCP server configuration using placeholders only.
 - Codex MCP configuration snippet.
-- Codex skills source and install notes.
+- Codex skills source, install counts, and portable plugin skills.
 - Antigravity compatibility notes.
 - A Windows restore script with safe defaults and manual follow-up steps.
 
@@ -17,14 +18,16 @@ No secrets, tokens, API keys, private SSH keys, cookies, or local credential fil
 
 ```text
 .
-├── .vscode/extensions.json
-├── antigravity/cursor-extensions-profile.json
-├── codex/codex-mcp.toml
-├── codex/skills-backup.json
-├── extensions/vscode-cursor-extensions.json
-├── extensions.md
-├── mcp/cursor-compatible-mcp.json
-└── scripts/restore-windows.ps1
+|-- .vscode/extensions.json
+|-- antigravity/cursor-extensions-profile.json
+|-- codex/codex-mcp.toml
+|-- codex/skills-backup.json
+|-- cursor/agents/
+|-- cursor/rules/
+|-- extensions/vscode-cursor-extensions.json
+|-- extensions.md
+|-- mcp/cursor-compatible-mcp.json
+`-- scripts/restore-windows.ps1
 ```
 
 ## Security Rules For Agents
@@ -35,7 +38,8 @@ If an agent updates this repository, follow these rules:
 2. Do not commit machine-specific private paths unless they are generic placeholders.
 3. Prefer environment variables for anything sensitive or machine-specific.
 4. Keep this repository restore-oriented. It should describe how to rebuild the setup, not contain private runtime state.
-5. Before committing, scan for obvious secrets:
+5. Do not import old MCP files directly from local editor profiles. They may contain hardcoded secrets.
+6. Before committing, scan for obvious secrets:
 
 ```powershell
 rg -n "gho_|ghp_|github_pat|api[_-]?key|token|secret|password|PRIVATE KEY|C:\\Users" .
@@ -89,22 +93,53 @@ Most extensions can be installed from the Marketplace:
 ```powershell
 code --install-extension angular.ng-template --force
 code --install-extension astro-build.astro-vscode --force
+code --install-extension bradlc.vscode-tailwindcss --force
+code --install-extension dbaeumer.vscode-eslint --force
 code --install-extension eamodio.gitlens --force
 code --install-extension esbenp.prettier-vscode --force
+code --install-extension franklinteixeira205.primeflex --force
+code --install-extension gruntfuggly.todo-tree --force
+code --install-extension humao.rest-client --force
+code --install-extension johnpapa.vscode-peacock --force
+code --install-extension loczek.next-js-ts-snippets --force
 code --install-extension mhutchie.git-graph --force
+code --install-extension ms-azuretools.vscode-docker --force
+code --install-extension pkief.material-icon-theme --force
 code --install-extension sldobri.bunker --force
+code --install-extension sst-dev.opencode --force
 code --install-extension streetsidesoftware.code-spell-checker --force
 code --install-extension streetsidesoftware.code-spell-checker-spanish --force
+code --install-extension tomoki1207.pdf --force
 code --install-extension typescriptteam.native-preview --force
 code --install-extension usernamehw.errorlens --force
+code --install-extension vector-of-bool.gitflow --force
+code --install-extension yigitfindikli.primengsnippets --force
 ```
 
-The extension `anysphere.remote-ssh` is Cursor-specific and is not available from the VS Code Marketplace. Restore it from a local Cursor installation or a private VSIX backup if needed.
+The Anysphere remote extensions are Cursor-specific and should be restored from a local Cursor installation or private VSIX backup if needed. Some less common extensions may also need a VSIX fallback depending on Marketplace availability.
 
 The extension inventory is stored in:
 
 - `extensions/vscode-cursor-extensions.json`
 - `.vscode/extensions.json`
+
+## Restoring Cursor Agents And Rules
+
+Cursor agents and rules are stored in:
+
+```text
+cursor/agents/
+cursor/rules/
+```
+
+Typical restore locations:
+
+```text
+%USERPROFILE%\.cursor\agents
+%USERPROFILE%\.cursor\rules
+```
+
+These files are text instructions only. They should not contain runtime secrets or local credentials.
 
 ## Restoring MCP Servers
 
@@ -128,7 +163,7 @@ Codex uses TOML rather than Cursor's JSON format. Merge this file into `%USERPRO
 codex/codex-mcp.toml
 ```
 
-Restart the target app after changing MCP config.
+Restart the target app after changing MCP config. Old local MCP files were intentionally not copied into this repository because they can contain hardcoded connection secrets.
 
 ## Restoring Codex Skills
 
@@ -138,7 +173,11 @@ The personal skills registry is stored separately:
 https://github.com/piedraprog/unified-personal-skills
 ```
 
-The previous install imported 1030 unique skills into Codex. Details and duplicate skill names are recorded in:
+The previous install imported 1030 unique skills from that registry into Codex. Twelve additional portable skills were recovered from Cursor plugin caches, bringing the installed total to 1042.
+
+The recovered plugin skills are GSAP and Stripe related. The Cursor `continual-learning` plugin skill was skipped because it depends on Cursor-specific agent behavior and is not useful as a standalone Codex skill.
+
+Details and duplicate skill names are recorded in:
 
 ```text
 codex/skills-backup.json
@@ -171,7 +210,8 @@ The script does not write secrets. You still need to set environment variables a
 When updating this profile:
 
 1. Refresh extension lists.
-2. Update MCP config with placeholders only.
-3. Update Codex skill source and counts if the skill registry changes.
-4. Run a secret scan.
-5. Commit and push.
+2. Update Cursor agents and rules if they changed.
+3. Update MCP config with placeholders only.
+4. Update Codex skill source and counts if the skill registry changes.
+5. Run a secret scan.
+6. Commit and push.

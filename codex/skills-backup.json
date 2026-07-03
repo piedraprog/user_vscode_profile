@@ -1,8 +1,29 @@
 {
   "source": "https://github.com/piedraprog/unified-personal-skills",
   "installedAt": "2026-07-03",
-  "installedUniqueSkills": 1030,
+  "installedUniqueSkills": 1042,
   "installPath": "%USERPROFILE%\\.codex\\skills",
+  "baseUniqueSkillsFromUnifiedPersonalSkills": 1030,
+  "additionalPortableSkillsFromCursorPlugins": [
+    "gsap-core",
+    "gsap-frameworks",
+    "gsap-performance",
+    "gsap-plugins",
+    "gsap-react",
+    "gsap-scrolltrigger",
+    "gsap-timeline",
+    "gsap-utils",
+    "stripe-best-practices",
+    "stripe-directory",
+    "stripe-projects",
+    "upgrade-stripe"
+  ],
+  "skippedNonPortableCursorPluginSkills": [
+    {
+      "name": "continual-learning",
+      "reason": "Depends on Cursor-specific agent behavior and is not useful as a standalone Codex skill."
+    }
+  ],
   "duplicateSkillNamesSkipped": [
     "2d-games",
     "3d-games",

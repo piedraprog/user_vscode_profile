@@ -1,0 +1,36 @@
+---
+description: Canon transversal — SDD, análisis previo, principios de código y uso de IA. Regla global de Cursor.
+alwaysApply: true
+---
+
+# Canon transversal (agnóstico)
+
+Punto de partida para proyectos frontend, backend y monorepos. Flujo **Spec-Driven** y pautas generales.
+
+## 1. Spec-Driven Development (SDD)
+
+- Todo desarrollo nace de una SPEC validada. **No se codifica a ciegas**.
+- Si la SPEC choca con el canon técnico, **gana el canon**. Notificar el conflicto antes de implementar algo subóptimo.
+
+## 2. Análisis previo (no asumir)
+
+Antes de nuevos endpoints, rutas, modelos o servicios:
+
+- **Backend:** revisar `src/modules/<modulo>/...` por casos de uso, repositorios o HTTP ya existentes.
+- **Frontend:** revisar `core/services/` y `core/models/` antes de duplicar clientes HTTP o modelos.
+
+## 3. Principios transversales
+
+- **Tamaño de archivos:** límite orientativo 600–800 líneas; dividir si crece más.
+- **Nombres:** prohibido `utils.ts`, `helpers.ts`, `data`, `process()` genéricos; nombres de negocio explícitos (`checkout-form.component.ts`, `payment-fee.calculator.ts`).
+- **Tipado:** prohibido `any` e implícitos peligrosos; investigar interfaces existentes o definirlas según SPEC.
+- **Consistencia:** replicar patrones, naming y estructura del repositorio.
+
+## 4. Interacción con IA
+
+- Cambios **acotados** al requerimiento; sin refactors colaterales no pedidos.
+- **No borrar** código comentado salvo petición explícita.
+
+## 5. Documentación extendida (opcional)
+
+Si mantienes el canon en Markdown (Obsidian, wiki, monorepo de plantillas), úsalo como referencia humana. Esta regla `.mdc` es la capa operativa que Cursor aplica en todos los proyectos cuando está en tu perfil (`~/.cursor/rules/`).

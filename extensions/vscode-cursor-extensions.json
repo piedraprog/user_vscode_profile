@@ -1,51 +1,143 @@
 {
-  "source": "Cursor mirrored to VS Code",
+  "source": "Cursor and VS Code profile restored from local backup",
   "lastRefreshed": "2026-07-03",
   "extensions": [
     {
       "id": "angular.ng-template",
-      "version": "22.0.1"
+      "cursorVersion": "22.0.1",
+      "vscodeVersion": "22.0.1"
     },
     {
       "id": "anysphere.remote-ssh",
-      "version": "1.1.6",
-      "note": "Cursor/Anysphere extension; not available in VS Code Marketplace."
+      "cursorVersion": "1.1.6",
+      "vscodeVersion": "1.1.6",
+      "note": "Cursor/Anysphere extension. Restore from Cursor local files or private VSIX backup."
+    },
+    {
+      "id": "anysphere.remote-wsl",
+      "cursorVersion": "1.0.13",
+      "vscodeVersion": "1.0.13",
+      "note": "Cursor/Anysphere extension. Restore from Cursor local files or private VSIX backup."
     },
     {
       "id": "astro-build.astro-vscode",
-      "version": "2.16.17"
+      "cursorVersion": "2.16.17",
+      "vscodeVersion": "2.16.17"
+    },
+    {
+      "id": "bradlc.vscode-tailwindcss",
+      "cursorVersion": "0.14.28",
+      "vscodeVersion": "0.14.29"
+    },
+    {
+      "id": "dbaeumer.vscode-eslint",
+      "cursorVersion": "3.0.24",
+      "vscodeVersion": "3.0.24"
     },
     {
       "id": "eamodio.gitlens",
-      "version": "18.2.0"
+      "cursorVersion": "18.2.0",
+      "vscodeVersion": "18.2.0"
     },
     {
       "id": "esbenp.prettier-vscode",
-      "version": "12.4.0"
+      "cursorVersion": "12.4.0",
+      "vscodeVersion": "12.4.0"
+    },
+    {
+      "id": "franklinteixeira205.primeflex",
+      "cursorVersion": "0.0.2",
+      "vscodeVersion": "0.0.2",
+      "note": "May require local VSIX restore depending on Marketplace availability."
+    },
+    {
+      "id": "gruntfuggly.todo-tree",
+      "cursorVersion": "0.0.226",
+      "vscodeVersion": "0.0.226"
+    },
+    {
+      "id": "humao.rest-client",
+      "cursorVersion": "0.25.0",
+      "vscodeVersion": "0.25.1"
+    },
+    {
+      "id": "johnpapa.vscode-peacock",
+      "cursorVersion": "4.2.2",
+      "vscodeVersion": "4.2.2"
+    },
+    {
+      "id": "loczek.next-js-ts-snippets",
+      "cursorVersion": "2.0.3",
+      "vscodeVersion": "2.0.3",
+      "note": "May require local VSIX restore depending on Marketplace availability."
     },
     {
       "id": "mhutchie.git-graph",
-      "version": "1.30.0"
+      "cursorVersion": "1.30.0",
+      "vscodeVersion": "1.30.0"
+    },
+    {
+      "id": "ms-azuretools.vscode-containers",
+      "cursorVersion": "2.4.5",
+      "vscodeVersion": "2.4.5",
+      "note": "Usually installed as a dependency of the Docker extension."
+    },
+    {
+      "id": "ms-azuretools.vscode-docker",
+      "cursorVersion": "2.0.0",
+      "vscodeVersion": "2.0.0"
+    },
+    {
+      "id": "pkief.material-icon-theme",
+      "cursorVersion": "5.36.1",
+      "vscodeVersion": "5.36.1"
     },
     {
       "id": "sldobri.bunker",
-      "version": "1.1.6"
+      "cursorVersion": "1.1.6",
+      "vscodeVersion": "1.1.6"
+    },
+    {
+      "id": "sst-dev.opencode",
+      "cursorVersion": "0.0.13",
+      "vscodeVersion": "0.0.13"
     },
     {
       "id": "streetsidesoftware.code-spell-checker",
-      "version": "4.5.6"
+      "cursorVersion": "4.5.6",
+      "vscodeVersion": "4.5.6"
     },
     {
       "id": "streetsidesoftware.code-spell-checker-spanish",
-      "version": "2.3.9"
+      "cursorVersion": "2.3.9",
+      "vscodeVersion": "2.3.9"
+    },
+    {
+      "id": "tomoki1207.pdf",
+      "cursorVersion": "1.2.2",
+      "vscodeVersion": "1.2.2"
     },
     {
       "id": "typescriptteam.native-preview",
-      "version": "0.20260703.1"
+      "cursorVersion": "0.20260703.1",
+      "vscodeVersion": "0.20260703.1"
     },
     {
       "id": "usernamehw.errorlens",
-      "version": "3.28.0"
+      "cursorVersion": "3.26.0",
+      "vscodeVersion": "3.28.0"
+    },
+    {
+      "id": "vector-of-bool.gitflow",
+      "cursorVersion": "1.2.1",
+      "vscodeVersion": "1.2.1",
+      "note": "May require local VSIX restore depending on Marketplace availability."
+    },
+    {
+      "id": "yigitfindikli.primengsnippets",
+      "cursorVersion": "1.0.5",
+      "vscodeVersion": "1.0.5",
+      "note": "May require local VSIX restore depending on Marketplace availability."
     }
   ]
 }

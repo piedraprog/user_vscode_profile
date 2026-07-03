@@ -1,0 +1,54 @@
+---
+description: Canon NestJS — hexagonal, DTOs, guards, APIs y bubble-up. Regla global de Cursor.
+globs:
+  - "**/modules/**/*.ts"
+  - "**/main.ts"
+  - "**/app.module.ts"
+alwaysApply: false
+---
+
+# Engineering Rules — Backend (Canon)
+
+NestJS con arquitectura hexagonal / DDD. Para el texto completo, usa la documentación Markdown del canon en tu repo o wiki si existe (p. ej. `Canon-Ingenieria/01-Backend-Rules.md`).
+
+## 0. Nuevo módulo desde cero
+
+1. **SPEC completo primero:** dominio, casos de uso y contrato de API. **Sin código** hasta tener SPEC validado.
+2. **Implementación** después del SPEC.
+
+## 1. Estructura por módulo
+
+```text
+src/modules/<nombre-modulo>/
+  domain/entities, enums, interfaces/
+  application/use-cases/ (o services/)
+  infrastructure/controllers, dtos, repositories, guards, interceptors/
+  <nombre>.module.ts
+```
+
+- `domain/`: sin acoplamiento a frameworks.
+- `application/`: casos de uso.
+- `infrastructure/`: frameworks y adaptadores.
+
+**Prohibido:** lógica, controladores o servicios sueltos en la raíz del módulo.
+
+## 2. DI
+
+- Casos de uso importan **interfaces** de `domain/interfaces/` vía **Injection Token**, no implementaciones concretas.
+
+## 3. Controladores y DTOs
+
+- Controladores sin lógica de negocio: request → use case/service → respuesta.
+- DTOs con `class-validator` / `class-transformer`; validación global `whitelist: true`, `forbidNonWhitelisted: true`.
+
+## 4. Guards / interceptors / middleware
+
+- **Middleware:** solo aspectos globales HTTP.
+- **Guards:** autenticación/autorización (JWT, roles); no lógica de negocio.
+- **Interceptors:** serialización de respuesta, métricas, logs transversales.
+
+## 5. APIs y errores
+
+- REST coherente; paginar colecciones por defecto.
+- **Bubble-up** de excepciones (guía de errores del canon si la tienes documentada).
+- Códigos HTTP apropiados: 200, 201, 400, 401, 403, 404, 409 según caso.

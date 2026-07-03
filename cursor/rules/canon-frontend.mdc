@@ -1,0 +1,42 @@
+---
+description: Canon Angular 17+ — standalone, Signals, OnPush, core/services. Regla global de Cursor.
+globs:
+  - "**/app/**/*.ts"
+  - "**/*.component.ts"
+  - "**/core/**/*.ts"
+alwaysApply: false
+---
+
+# Engineering Rules — Frontend (Canon)
+
+Angular 17+ moderno. Para el texto completo, usa la documentación Markdown del canon en tu repo o wiki si existe (p. ej. `Canon-Ingenieria/02-Frontend-Rules.md`).
+
+## 1. Capas
+
+- **`core/`:** singletons, interceptors, guards, **clientes HTTP** de la API; interfaces alineadas al backend (nunca `any`).
+- **`shared/`:** componentes dumb, directivas, pipes.
+- **`features/` o `pages/`:** vistas de dominio.
+
+## 2. Signals y RxJS
+
+- Estado local con **Signals** (`signal`, `computed`, `input`).
+- **RxJS** para HTTP, WebSockets, tiempo; no masivo en UI.
+- Sin `subscribe()` huérfano: `takeUntilDestroyed()` o `toSignal()`.
+
+## 3. Rendimiento
+
+- **Standalone** obligatorio para features nuevas; sin NgModules nuevos.
+- **ChangeDetectionStrategy.OnPush** en componentes.
+- **`inject()`** preferido sobre constructor cargado.
+- **`@for` con `track`** en plantillas.
+
+## 4. UX en vistas
+
+- Estados: Loading, Error, Empty, Success.
+- Skeletons sobre spinners donde reduzcan layout shift.
+- Optimistic UI cuando mutaciones lo permitan.
+
+## 5. Estilos
+
+- Un sistema (p. ej. Tailwind o PrimeFlex); sin mezclar sin criterio.
+- Evitar `::ng-deep` salvo integración con terceros cerrados.

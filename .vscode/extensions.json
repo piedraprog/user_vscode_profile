@@ -2,14 +2,27 @@
   "recommendations": [
     "angular.ng-template",
     "astro-build.astro-vscode",
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
     "eamodio.gitlens",
     "esbenp.prettier-vscode",
+    "franklinteixeira205.primeflex",
+    "gruntfuggly.todo-tree",
+    "humao.rest-client",
+    "johnpapa.vscode-peacock",
+    "loczek.next-js-ts-snippets",
     "mhutchie.git-graph",
+    "ms-azuretools.vscode-docker",
+    "pkief.material-icon-theme",
     "sldobri.bunker",
+    "sst-dev.opencode",
     "streetsidesoftware.code-spell-checker",
     "streetsidesoftware.code-spell-checker-spanish",
+    "tomoki1207.pdf",
     "typescriptteam.native-preview",
-    "usernamehw.errorlens"
+    "usernamehw.errorlens",
+    "vector-of-bool.gitflow",
+    "yigitfindikli.primengsnippets"
   ],
   "unwantedRecommendations": []
 }
