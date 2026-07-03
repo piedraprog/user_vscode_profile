@@ -1,0 +1,62 @@
+{
+  "source": "Cursor",
+  "lastRefreshed": "2026-07-03",
+  "extensions": [
+    {
+      "id": "sldobri.bunker",
+      "version": "1.1.6",
+      "relativeLocation": "sldobri.bunker-1.1.6-universal"
+    },
+    {
+      "id": "mhutchie.git-graph",
+      "version": "1.30.0",
+      "relativeLocation": "mhutchie.git-graph-1.30.0-universal"
+    },
+    {
+      "id": "streetsidesoftware.code-spell-checker",
+      "version": "4.5.6",
+      "relativeLocation": "streetsidesoftware.code-spell-checker-4.5.6-universal"
+    },
+    {
+      "id": "streetsidesoftware.code-spell-checker-spanish",
+      "version": "2.3.9",
+      "relativeLocation": "streetsidesoftware.code-spell-checker-spanish-2.3.9-universal"
+    },
+    {
+      "id": "esbenp.prettier-vscode",
+      "version": "12.4.0",
+      "relativeLocation": "esbenp.prettier-vscode-12.4.0-universal"
+    },
+    {
+      "id": "astro-build.astro-vscode",
+      "version": "2.16.17",
+      "relativeLocation": "astro-build.astro-vscode-2.16.17-win32-x64"
+    },
+    {
+      "id": "angular.ng-template",
+      "version": "22.0.1",
+      "relativeLocation": "angular.ng-template-22.0.1-universal"
+    },
+    {
+      "id": "typescriptteam.native-preview",
+      "version": "0.20260703.1",
+      "relativeLocation": "typescriptteam.native-preview-0.20260703.1-win32-x64"
+    },
+    {
+      "id": "usernamehw.errorlens",
+      "version": "3.26.0",
+      "relativeLocation": "usernamehw.errorlens-3.26.0-universal"
+    },
+    {
+      "id": "eamodio.gitlens",
+      "version": "18.2.0",
+      "relativeLocation": "eamodio.gitlens-18.2.0-universal"
+    },
+    {
+      "id": "anysphere.remote-ssh",
+      "version": "1.1.6",
+      "relativeLocation": "anysphere.remote-ssh-1.1.6"
+    }
+  ],
+  "note": "Antigravity installation inspected on this machine did not expose a VS Code-compatible extension CLI or extension directory. This file records the desired profile."
+}

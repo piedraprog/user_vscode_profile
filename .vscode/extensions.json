@@ -1,5 +1,15 @@
 {
-    "recommendations": [
-        "dbaeumer.vscode-eslint"
-    ]
+  "recommendations": [
+    "angular.ng-template",
+    "astro-build.astro-vscode",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "mhutchie.git-graph",
+    "sldobri.bunker",
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-spanish",
+    "typescriptteam.native-preview",
+    "usernamehw.errorlens"
+  ],
+  "unwantedRecommendations": []
 }

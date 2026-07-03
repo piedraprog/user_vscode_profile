@@ -1,0 +1,46 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "bunx",
+      "args": [
+        "@upstash/context7-mcp"
+      ]
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ]
+    },
+    "fs-projects": {
+      "command": "bunx",
+      "args": [
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\gordo\\Documents\\Development\\personal",
+        "C:\\Users\\gordo\\Documents\\vault_obsidian",
+        "C:\\Users\\gordo\\Documents\\vault_obsidian_negocios",
+        "C:\\Users\\gordo\\Documents\\Development\\personal\\tools"
+      ]
+    },
+    "cms": {
+      "command": "bun",
+      "args": [
+        "C:\\Users\\gordo\\Documents\\Development\\personal\\tools\\mcp-servers\\mcp-cms\\dist\\index.js"
+      ],
+      "env": {
+        "CMS_URL": "https://cms.drapie.dev",
+        "CMS_API_KEY": "${env:CMS_API_KEY}"
+      }
+    },
+    "stitch": {
+      "command": "bunx",
+      "args": [
+        "@_davideast/stitch-mcp",
+        "proxy"
+      ],
+      "env": {
+        "STITCH_API_KEY": "${env:STITCH_API_KEY}"
+      }
+    }
+  }
+}

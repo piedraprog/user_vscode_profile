@@ -1,0 +1,51 @@
+{
+  "source": "Cursor mirrored to VS Code",
+  "lastRefreshed": "2026-07-03",
+  "extensions": [
+    {
+      "id": "angular.ng-template",
+      "version": "22.0.1"
+    },
+    {
+      "id": "anysphere.remote-ssh",
+      "version": "1.1.6",
+      "note": "Cursor/Anysphere extension; not available in VS Code Marketplace."
+    },
+    {
+      "id": "astro-build.astro-vscode",
+      "version": "2.16.17"
+    },
+    {
+      "id": "eamodio.gitlens",
+      "version": "18.2.0"
+    },
+    {
+      "id": "esbenp.prettier-vscode",
+      "version": "12.4.0"
+    },
+    {
+      "id": "mhutchie.git-graph",
+      "version": "1.30.0"
+    },
+    {
+      "id": "sldobri.bunker",
+      "version": "1.1.6"
+    },
+    {
+      "id": "streetsidesoftware.code-spell-checker",
+      "version": "4.5.6"
+    },
+    {
+      "id": "streetsidesoftware.code-spell-checker-spanish",
+      "version": "2.3.9"
+    },
+    {
+      "id": "typescriptteam.native-preview",
+      "version": "0.20260703.1"
+    },
+    {
+      "id": "usernamehw.errorlens",
+      "version": "3.28.0"
+    }
+  ]
+}
